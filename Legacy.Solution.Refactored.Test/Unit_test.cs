@@ -95,5 +95,15 @@ namespace Legacy.Solution.Refactored.Test
 
             Assert.That(_heater.TurnOffCounter, Is.EqualTo(2));
         }
+
+        [Test]
+        public void Regulate_threshold_is_15()
+        {
+            _uut.SetThreshold(15);
+            _tempSensor.Temp = 20;
+            _uut.Regulate();
+
+            Assert.That(_heater.State, Is.False);
+        }
     }
 }
