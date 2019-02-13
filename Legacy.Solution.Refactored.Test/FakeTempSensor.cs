@@ -9,8 +9,13 @@ namespace Legacy.Solution.Refactored.Test
 {
     class FakeTempSensor : ITempSensor
     {
-        public int gen;
+        public int gen { get; set; }
 
+        public FakeTempSensor()
+        {
+            gen = 0;
+        }
+        
         public int GetTemp()
         {
             return gen;
