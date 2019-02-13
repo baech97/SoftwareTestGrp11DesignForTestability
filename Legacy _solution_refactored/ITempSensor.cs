@@ -10,5 +10,7 @@ namespace Legacy__solution_refactored
     {
         int GetTemp();
         bool RunSelfTest();
+
+        
     }
 }

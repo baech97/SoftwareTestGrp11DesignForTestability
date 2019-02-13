@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,9 @@ namespace Legacy.Solution.Refactored.Test
 {
     public class FakeHeater : IHeater
     {
+        public bool State;
+        public int TurnOffCounter = 0;
+        public int TurnOnCounter = 0;
         public bool RunSelfTest()
         {
             return true;
@@ -16,12 +20,17 @@ namespace Legacy.Solution.Refactored.Test
 
         public void TurnOff()
         {
-            Console.WriteLine("Heater is turned off");
+            State = false;
+            TurnOffCounter++;
+
         }
 
         public void TurnOn()
         {
-            Console.WriteLine("Heater is turned on");
+            State = true;
+            TurnOnCounter++;
         }
+
+
     }
 }

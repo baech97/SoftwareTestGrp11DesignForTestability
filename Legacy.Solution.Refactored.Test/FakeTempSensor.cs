@@ -7,23 +7,24 @@ using Legacy__solution_refactored;
 
 namespace Legacy.Solution.Refactored.Test
 {
-    class FakeTempSensor : ITempSensor
+    public class FakeTempSensor : ITempSensor
     {
-        public int gen { get; set; }
+        public int Temp { get; set; }
+        public bool SelfTest { get; set; }
 
         public FakeTempSensor()
         {
-            gen = 0;
+            Temp = 0;
         }
         
         public int GetTemp()
         {
-            return gen;
+            return Temp;
         }
 
         public bool RunSelfTest()
         {
-            return true;
+            return SelfTest;
         }
     }
 }
