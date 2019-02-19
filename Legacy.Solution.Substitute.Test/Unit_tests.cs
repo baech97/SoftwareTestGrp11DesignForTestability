@@ -61,7 +61,7 @@ namespace Legacy.Solution.Substitute.Test
         }
 
         [Test]
-        public void Heater_Is_Turned_off_one_time()
+        public void Heater_Is_Turned_off_one_tim()
         {
             _tempSensor.GetTemp().Returns(20);
             _uut.Regulate();
