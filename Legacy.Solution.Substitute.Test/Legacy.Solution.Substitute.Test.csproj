@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{30E85275-9B41-4F74-A9AC-8748246182C9}</ProjectGuid>
+    <ProjectGuid>{CD153540-5293-432F-A915-23E582526A5A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Legacy.Solution.Refactored.Test</RootNamespace>
-    <AssemblyName>Legacy.Solution.Refactored.Test</AssemblyName>
+    <RootNamespace>Legacy.Solution.Substitute.Test</RootNamespace>
+    <AssemblyName>Legacy.Solution.Substitute.Test</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -57,19 +57,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FakeHeater.cs" />
-    <Compile Include="FakeTempSensor.cs" />
-    <Compile Include="Unit_test.cs" />
+    <Compile Include="Unit_tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Legacy _solution_refactored\Legacy _solution_refactored.csproj">
       <Project>{b005e20c-688f-429c-882b-4ca2524e6e6e}</Project>
       <Name>Legacy _solution_refactored</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

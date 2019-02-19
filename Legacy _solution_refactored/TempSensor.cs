@@ -1,7 +1,7 @@
 ﻿using System;
 using Legacy__solution_refactored;
 
-namespace ECS.Legacy 
+namespace Legacy__solution_refactored
 {
     internal class TempSensor : ITempSensor
     {
